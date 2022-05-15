@@ -1,0 +1,33 @@
+{
+  "name": "sop",
+  "version": "1.0.0",
+  "description": "tool for cheking students aviability",
+  "private": true,
+  "scripts": {
+    "build:ts": "webpack --config ./webpack.config.js",
+    "build:sass": "sass ./src:./dist",
+    "build:files": "copyfiles -u 1 ./src/**/*.html ./dist",
+    "build": "rimraf ./dist && npm run build:ts && npm run build:sass && npm run build:files",
+    "start": "npm run build && npm run start:server",
+    "start:server": "live-server ./dist --port=3000",
+	"start:watch": "concurrently --kill-others \"npm run build:ts -- --watch\" \"npm run build:sass -- --watch\" \"live-server ./dist --port=3000\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Fleisar",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/node": "^17.0.27",
+    "concurrently": "^7.1.0",
+    "copyfiles": "^2.4.1",
+    "rimraf": "^3.0.2",
+    "sass": "^1.51.0",
+    "ts-loader": "^9.2.8",
+    "typescript": "^4.6.3",
+    "webpack": "^5.72.0",
+    "webpack-cli": "^4.9.2"
+  }
+}

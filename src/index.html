@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimal-scale=1.0,maximum-scale=1.0">
+		<script src="//cdn.jsdelivr.net/npm/eruda"></script>
+		<script>eruda.init()</script>		
+		<script defer src="assets/index.js"></script>
+		<link href="assets/styles.general.css" rel="stylesheet">
+		<link href="assets/styles.index.css" rel="stylesheet">
+	</head>
+	<body>
+		<form action="api/user" method="post">
+			<h1>
+				<span class="marked">Система отметки</span>
+				<span class="marked">посещяемости</span>
+			</h1>
+			<input class="form_input" name="indentifier" type="text" minlength="3" maxlength="128" placeholder="Фамилия Имя">
+			<button type="submit" class="button">Сохранить и отметиться</button>
+			<a href="panel.html" class="half-opacity">Панель</a>
+		</div>
+	</body>
+</html>
